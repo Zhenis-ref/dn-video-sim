@@ -1,0 +1,49 @@
+episode:
+  T: 80
+  dt: 0.05
+
+env:
+  latent_dim: 8
+  num_wells: 6
+  well_depth_min: 0.8
+  well_depth_max: 2.0
+  well_width_min: 0.8
+  well_width_max: 1.8
+  ruggedness: 0.08
+  drift_scale: 0.12
+  velocity_scale: 0.18
+
+model:
+  A: 10.0
+  k: 8.0
+  Ncrit: 0.5
+  p: 2.0
+  eps: 0.01
+  beta: 0.8
+
+noise:
+  sigma_z: 0.035
+  sigma_v: 0.026
+  ar_lambda: 0.88
+
+frontier:
+  init_candidates: 8
+  max_candidates_baseline: 16
+  max_candidates_cce: 12
+  min_candidates_cce: 4
+  baseline_copies: 2
+
+metrics:
+  w_prompt: 0.30
+  w_temporal: 0.27
+  w_motion: 0.18
+  w_style: 0.15
+  w_identity: 0.10
+
+control:
+  gamma: 0.40
+  k_dual: 2.0
+  D_min: 0.2
+  D_max: 0.6
+  expand_gain: 1.5
+  compress_gain: 12.0
